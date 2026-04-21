@@ -186,20 +186,27 @@
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dpHolder.png" />
-  </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cardHolder.png" />
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="appsettings.Production.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BankDatabaseAccess\BankDatabaseAccess.csproj">
       <Project>{83583728-a1aa-4e28-87eb-4c7fa1a9f350}</Project>
-      <Name>BankDatabaseAccess</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\getStarted_.png" />
-  </ItemGroup>
+  <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+  <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.0" />
+  <PackageReference Include="Azure.Identity" Version="1.10.4" />
+  <PackageReference Include="Microsoft.Identity.Client" Version="4.56.0" />
+  <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+  <PackageReference Include="System.Text.Json" Version="7.0.3" />
   <ItemGroup>
     <None Include="Resources\gitIcon.png" />
   </ItemGroup>
